@@ -30,9 +30,9 @@ lm = base_speed
 rm = base_speed
 max_speed = 80
 # PID 제어를 위한 파라미터
-Kp = 0.15   # 비례 계수
+Kp = 0.20   # 비례 계수
 Ki = 0.01   # 적분 계수
-Kd = 0.1  # 미분 계수
+Kd = 0.05  # 미분 계수
 
 # PID 제어 변수 초기화
 previous_error = 0
@@ -62,7 +62,7 @@ delay_frames = 0
 delay_buffer = deque(maxlen=delay_frames) if delay_frames > 0 else None
 
 # 최근 프레임 데이터 저장을 위한 deque
-max_frames = 3
+max_frames = 4
 x_L_history = deque(maxlen=max_frames)
 x_R_history = deque(maxlen=max_frames)
 
